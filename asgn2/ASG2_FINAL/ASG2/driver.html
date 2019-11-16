@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+      <meta charset="utf-8"/>
+      <title> Matthew Rhea's Assignment 2 </title>
+      <!-- Include external libraries -->
+      <script src = "lib/webgl-utils.js"></script>
+      <script src = "lib/webgl-debug.js"></script>
+      <script src = "lib/cuon-utils.js"></script>
+      <script src = "lib/load-file.js"></script>
+
+      <!-- Include internal functions -->
+      <script src = "prog/eventFunctions.js"></script>
+      <script src = "prog/glslFunctions.js"></script>
+      <script src = "prog/htmlFunctions.js"></script>
+      <script src = "prog/tick.js"></script>
+
+      <!-- Include scene objects -->
+      <script src = "prog/scene/scene.js"></script>
+      <script src = "prog/scene/vertex.js"></script>
+      <script src = "prog/scene/geometry.js"></script>
+
+      <!-- Include geometric objects -->
+      <script src = "prog/geometries/circle.js"></script>
+      <script src = "prog/geometries/square.js"></script>
+      <script src = "prog/geometries/triangle.js"></script>
+
+      <!-- Include shaders -->
+      <script src = "prog/shaders.js"></script>
+
+      <!-- Include main program -->
+      <script src = "prog/main.js"></script>
+
+  </head>
+
+  <body onload = "main()">
+    <p> Assignment 2 </p>
+
+    <!-- Initialize Canvas -->
+    <canvas id="webgl" height="500" width="500">
+      Please use a browser supporting canvas
+    </canvas>
+
+    <!-- Declare button(s) -->
+    <h1>
+      <button onClick="clearCanvas()">Clear Canvas</button>
+      <button onClick="chooseSquare()">Squares</button>
+      <button onClick="chooseTriangle()">Triangles</button>
+      <button onclick="chooseCircle()">Circles</button>
+    </h1>
+
+    <!-- Declare sliders -->
+    <h2>
+      <div class="slidecontainer">
+        <p>Red</p>
+        <input type="range" min="0.0" max="255.0" value="255.0" class="slider"
+        id="redSlider">
+      </div>
+      <div class="slidecontainer">
+        <p>Blue</p>
+        <input type="range" min="0.0" max="255.0" value="255.0" class="slider"
+        id="blueSlider">
+      </div>
+      <div class="slidecontainer">
+        <p>Green</p>
+        <input type="range" min="0.0" max="255.0" value="255.0" class="slider"
+        id="greenSlider">
+      </div>
+      <div class="slidecontainer">
+        <p>Shape Size:</p>
+        <input type="range" min="0.0" max="100.0" value="0.0" class="slider"
+        id="shapeSize">
+      </div>
+      <div class="slidecontainer">
+        <p>(Circles) Segment Count:</p>
+        <input type="range" min="1.0" max="100.0" value="1.0" class="slider"
+        id="segmentCount">
+      </div>
+    </h2>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+      <meta charset="utf-8"/>
+      <title> "Matthew Rhea's Assignment 1 </title>
+      <!-- Include external libraries -->
+      <script src = "lib/webgl-utils.js"></script>
+      <script src = "lib/webgl-debug.js"></script>
+      <script src = "lib/cuon-utils.js"></script>
+      <script src = "lib/load-file.js"></script>
+
+      <!-- Include main program -->
+      <script src = "prog/main.js"></script>
+
+      <!-- Include internal functions -->
+      <script src = "prog/eventFunctions.js"></script>
+      <script src = "prog/glslFunctions.js"></script>
+      <script src = "prog/htmlFunctions.js"></script>
+
+      <!-- Include shaders -->
+      <script src = "prog/shaders.js"></script>
+  </head>
+
+  <body onload = "main()">
+    <p> Assignment 1 </p>
+
+    
+    <canvas id="webgl" height="500" width="500">
+      Please use a browser supporting canvas
+    </canvas>
+
+    <!-- Declare sliders -->
+    <h1>
+      <div class="slidecontainer">
+        <p>Red</p>
+        <input type="range" min="0.0" max="255.0" value="255.0" class="slider"
+        id="redSlider">
+      </div>
+      <div class="slidecontainer">
+        <p>Blue</p>
+        <input type="range" min="0.0" max="255.0" value="255.0" class="slider"
+        id="blueSlider">
+      </div>
+      <div class="slidecontainer">
+        <p>Green</p>
+        <input type="range" min="0.0" max="255.0" value="255.0" class="slider"
+        id="greenSlider">
+      </div>
+      <div class="slidecontainer">
+        <p>Point Size</p>
+        <input type="range" min="1.0" max="100.0" value="10.0" class="slider"
+        id="pointSize">
+      </div>
+    </h1>
+    <!-- Declare button(s) -->
+    <h2>
+      <button onClick="clearCanvas()">Clear Canvas</button>
+    </h2>
+
+  </body>
+</html>

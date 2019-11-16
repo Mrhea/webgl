@@ -1,0 +1,11 @@
+/**
+ * Updates the text within an HTML element.
+ *
+ * @author Matthew Rhea 
+ *
+ * @param {String} text String being sent to HTML element.
+ * @param {String} htmlID The ID of an html element.
+ */
+function sendTextToHTML(text, htmlID) {
+    document.getElementById(htmlID).innerHTML = text;
+}
